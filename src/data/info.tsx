@@ -1,9 +1,9 @@
 import {
+  IconBrandAws,
   IconBrandGithub,
   IconBrandLinkedin,
-  IconBrandNextjs,
   IconBrandNodejs,
-  IconBrandX,
+  IconBrandPython,
   IconMail,
 } from "@tabler/icons-react";
 import type { ReactNode } from "react";
@@ -13,21 +13,12 @@ import { Docker } from "@/components/ui/svgs/docker";
 import { Git } from "@/components/ui/svgs/git";
 import { GitHubCopilot } from "@/components/ui/svgs/githubCopilot";
 import { GithubDark } from "@/components/ui/svgs/githubDark";
-import { Hono } from "@/components/ui/svgs/hono";
-import { Java } from "@/components/ui/svgs/java";
 import { Javascript } from "@/components/ui/svgs/javascript";
 import { MongodbIconDark } from "@/components/ui/svgs/mongodbIconDark";
-import { OpencodeIcon } from "@/components/ui/svgs/opencode";
-import { PiLogo } from "@/components/ui/svgs/piLogo";
 import { Postgresql } from "@/components/ui/svgs/postgresql";
-import { Postman } from "@/components/ui/svgs/postman";
 import { ReactDark } from "@/components/ui/svgs/reactDark";
-import { Reactquery } from "@/components/ui/svgs/reactquery";
-import { Redis } from "@/components/ui/svgs/redis";
-import { Tailwindcss } from "@/components/ui/svgs/tailwindcss";
-import { Trpc } from "@/components/ui/svgs/trpc";
+import { Kubernetes } from "@/components/ui/svgs/kubernetes";
 import { Typescript } from "@/components/ui/svgs/typescript";
-import { Vercel } from "@/components/ui/svgs/vercelDark";
 
 type Social = {
   name: string;
@@ -39,30 +30,25 @@ export const socials: Social[] = [
   {
     name: "Email Me",
     icon: <IconMail className="size-4" />,
-    href: "mailto:humpatil1@gmail.com",
+    href: "mailto:rbhanu504@gmail.com",
   },
   {
     name: "Github",
     icon: <IconBrandGithub className="size-4" />,
-    href: "https://github.com/harsh-m-patil",
+    href: "https://github.com/bhanreddy1973",
   },
   {
     name: "LinkedIn",
     icon: <IconBrandLinkedin className="size-4" />,
-    href: "https://www.linkedin.com/in/harshmpatil",
-  },
-  {
-    name: "X / Twitter",
-    icon: <IconBrandX className="size-4" />,
-    href: "https://x.com/patilharshm",
+    href: "https://www.linkedin.com/in/bhanu-reddy-a30882288/",
   },
 ];
 
 export const languages = [
   {
-    name: "Java",
-    icon: <Java />,
-    favourite: false,
+    name: "Python",
+    icon: <IconBrandPython className="size-4" />,
+    favourite: true,
   },
   {
     name: "JavaScript",
@@ -72,7 +58,17 @@ export const languages = [
   {
     name: "TypeScript",
     icon: <Typescript />,
-    favourite: true,
+    favourite: false,
+  },
+  {
+    name: "SQL",
+    icon: null,
+    favourite: false,
+  },
+  {
+    name: "C++",
+    icon: null,
+    favourite: false,
   },
 ];
 
@@ -83,51 +79,51 @@ export const technologies = [
     favourite: false,
   },
   {
-    name: "Next.js",
-    icon: <IconBrandNextjs />,
-    favourite: false,
-  },
-  {
-    name: "Hono",
-    icon: <Hono />,
-    favourite: true,
-  },
-  {
-    name: "TailwindCSS",
-    icon: <Tailwindcss />,
-    favourite: false,
-  },
-  {
-    name: "tRPC",
-    icon: <Trpc />,
-    favourite: false,
-  },
-  {
-    name: "Tanstack Query",
-    icon: <Reactquery />,
-    favourite: true,
-  },
-  {
     name: "Node.js",
     icon: <IconBrandNodejs />,
+    favourite: false,
+  },
+  {
+    name: "PyTorch",
+    icon: null,
+    favourite: true,
+  },
+  {
+    name: "TensorFlow",
+    icon: null,
+    favourite: false,
+  },
+  {
+    name: "Apache Kafka",
+    icon: null,
+    favourite: false,
+  },
+  {
+    name: "Apache Flink",
+    icon: null,
+    favourite: false,
+  },
+  {
+    name: "FastAPI",
+    icon: null,
     favourite: false,
   },
 ];
 
 export const databases = [
   {
-    name: "MongoDB",
-    icon: <MongodbIconDark />,
-    favourite: false,
-  },
-  {
     name: "PostgreSQL",
     icon: <Postgresql />,
     favourite: true,
   },
   {
-    name: "Redis",
-    icon: <Redis />,
+    name: "MongoDB",
+    icon: <MongodbIconDark />,
+    favourite: false,
+  },
+  {
+    name: "OpenSearch",
+    icon: null,
     favourite: false,
   },
 ];
@@ -149,32 +145,22 @@ export const tools = [
     favourite: false,
   },
   {
-    name: "Vercel",
-    icon: <Vercel />,
+    name: "AWS",
+    icon: <IconBrandAws className="size-4" />,
     favourite: false,
   },
   {
-    name: "Postman",
-    icon: <Postman />,
+    name: "Kubernetes",
+    icon: <Kubernetes className="size-4" />,
     favourite: false,
   },
 ];
 
 export const aiTools = [
   {
-    name: "Pi",
-    icon: <PiLogo />,
-    favourite: true,
-  },
-  {
-    name: "Opencode",
-    icon: <OpencodeIcon />,
-    favourite: false,
-  },
-  {
     name: "Claude Code",
     icon: <Claude />,
-    favourite: false,
+    favourite: true,
   },
   {
     name: "Cursor",
@@ -191,71 +177,92 @@ export const aiTools = [
 export const workExperience = [
   {
     company: "Swiggy",
-    role: "Gen AI Intern",
+    role: "AI / Data Engineering Intern",
     type: "intern",
     iconUrl: "/swiggy.jpeg",
-    period: "Oct 2025 - Present",
+    period: "Nov 2025 - Present",
     location: "Onsite - Bangalore",
     points: [
-      "Built automation workflows in n8n that cut task time by ~95%.",
-      "Shipped custom MCP integrations for n8n to make AI-assisted flows actually work.",
-      "Set up CI/CD on AWS and wrote end-to-end tests so deploys behave.",
-      "Teaming up with AI Infra & Governance folks on enterprise-scale AI stuff.",
+      "Built a production MCP (Model Context Protocol) tool server — a FastMCP-based agentic backend exposing 6 AI-callable tools (semantic search, metadata retrieval, lineage traversal, schema lookup, column discovery, DDL access) enabling LLM agents to query enterprise data via structured tool calls.",
+      "Architected an end-to-end LLM documentation pipeline auto-generating structured metadata for 6,500+ Snowflake and Databricks tables — from schema extraction and GitHub code search across 14 private repos to Claude LLM summarization and OpenSearch indexing.",
+      "Engineered a context compression algorithm condensing schema, lineage, usage signals, and code snippets into token-efficient prompts — reducing LLM input size by 60% while preserving documentation quality at warehouse scale.",
+      "Built a hybrid semantic search system — 1024-dim dense embeddings, BM25 sparse retrieval, and hybrid re-ranking — enabling sub-second natural-language discovery across the enterprise knowledge corpus.",
+      "Implemented structured output parsing with self-repair: malformed LLM JSON outputs trigger a secondary correction pass — achieving >99.5% parse success rate across 6,500+ invocations.",
+      "Achieved 10x pipeline throughput via parallel processing (15 workers), bulk prefetching (replacing ~60,000 per-table queries with 6 batch queries), thread-safe caching, and exponential backoff retry logic.",
+      "Shipped a real-time CDC streaming pipeline using Debezium, Apache Kafka, and Apache Flink — built the Flink transformation layer consuming raw binlog events, flattening Debezium envelopes, applying PII detection/masking, and publishing to downstream topics with schema evolution handling.",
+      "Acted as primary bridge between Swiggy and Confluent's Professional Services team — set up the full Confluent Flink environment (Nginx/HAProxy proxy, endpoint whitelisting, VPC peering) within Swiggy's private network, unblocking the entire team.",
+      "Built Grafana alerting for RDS connector health, consumer lag, and throughput; developed CDC sync/merge logic with deduplication and schema evolution handling.",
     ],
   },
   {
-    company: "Talnex",
-    role: "Full Stack Developer Intern",
+    company: "IIIT Kottayam",
+    role: "Research Assistant — Medical AI",
     type: "intern",
     iconUrl: "/talnex.png",
-    period: "Aug 2025 - Sep 2025",
+    period: "Aug 2024 - Sept 2025",
+    location: "Kottayam, Kerala",
+    points: [
+      "Developed a CNN-based classification pipeline for skin cancer detection — achieving 90.5% accuracy on clinical dermoscopy datasets with class-imbalanced multi-label prediction.",
+      "Applied model compression (structured pruning + INT8 quantization) reducing inference latency by 40% — enabling deployment on resource-constrained medical devices without accuracy degradation.",
+      "Followed MLOps best practices: reproducible experiment tracking, hyperparameter search, model versioning, and automated evaluation pipelines.",
+      "Published peer-reviewed research under Prof. Dr. Bhanu Chander on deep learning for medical image classification.",
+    ],
+  },
+  {
+    company: "Drdot",
+    role: "Backend Engineer Intern",
+    type: "intern",
+    iconUrl: "/talnex.png",
+    period: "Dec 2024 - May 2025",
     location: "Remote",
     points: [
-      "Built backend features in a production Next.js app with Supabase Postgres, kept it stable and fast.",
-      "Designed and maintained REST APIs so product stuff could actually talk to each other.",
-      "Fixed a nasty production bug, cut downtime by ~40%.",
-      "Worked with a 10-dev team on Git/GitHub, reviews, and agile rituals.",
+      "Built backend microservices in Node.js with 85% unit test coverage — focused on writing clean, well-documented, production-quality code following industry best practices.",
+      "Improved API throughput by 50% through query optimization and connection pooling.",
+      "Integrated CI/CD pipelines that automatically gate deployments on test passage.",
+      "Collaborated in agile sprint cycles: participated in code reviews, wrote detailed API documentation, and contributed to technical design discussions for new feature development.",
     ],
   },
 ];
 
 export const projects = [
   {
-    name: "Interview Archive",
-    imageUrl: "/projects/interview.png",
-    description: "Discover & Share Interview Questions",
-    href: "https://interview-archive.vercel.app/",
-    github: "https://github.com/harsh-m-patil/interview-archive",
-  },
-  {
-    name: "Resume LSP",
-    imageUrl: "/projects/resume-lsp.png",
+    name: "LLM Inference Gateway",
+    imageUrl: "/projects/LLm_interface.png",
     description:
-      "A minimal LSP implementation in Go tailored for resume text analysis.",
-    href: "https://github.com/harsh-m-patil/lsp-for-resumes/tree/resume-optimus",
-    github:
-      "https://github.com/harsh-m-patil/lsp-for-resumes/tree/resume-optimus",
+      "Self-hostable API gateway for Claude models — FastAPI, gRPC workers, Redis rate limiting, ClickHouse analytics, and a Next.js dashboard.",
+    href: "https://llm-inference-gateway.vercel.app/",
+    github: "https://github.com/bhanreddy1973/LLM-Inference-Gateway",
   },
   {
-    name: "WorkSphere",
-    imageUrl: "/projects/worksphere.png",
+    name: "Bite a Bit",
+    imageUrl: "/projects/bite_a_bit.png",
     description:
-      "A Modern Job Board Platform Connecting Talent with Opportunity",
-    href: "https://worksphere35.vercel.app/",
-    github: "https://github.com/harsh-m-patil/worksphere",
+      "Full-stack food ordering app with personalized dining experience — Next.js, TypeScript, Firebase, and Firestore.",
+    href: "https://biteabit.vercel.app/",
+    github: "https://github.com/bhanreddy1973/bite_a_bit",
   },
   {
-    name: "Betternews",
-    imageUrl: "/projects/betternews.png",
-    description: "Full Stack Hackernews Clone",
-    href: "https://betternews.onrender.com",
-    github: "https://github.com/harsh-m-patil/betternews",
+    name: "Distributed Real-Time Platform",
+    imageUrl: "/projects/Chat_application.png",
+    description:
+      "Real-time chat platform with sub-second latency, 15+ REST APIs, JWT auth, and 99.9% uptime on AWS.",
+    href: "https://vchat-xn0io.sevalla.app/",
+    github: "https://github.com/bhanreddy1973/vchat",
   },
   {
-    name: "CodeCraft",
-    imageUrl: "/projects/codecraft.png",
-    description: "An online code editor and snippet sharing platform.",
-    href: "https://coditer.vercel.app/",
-    github: "https://github.com/harsh-m-patil/code-crafters",
+    name: "AI Content Generation App",
+    imageUrl: "/projects/Meme_generator.png",
+    description:
+      "AI-powered web app — prompt engineering pipeline generating contextually relevant content. Built with React, TypeScript, Firebase.",
+    href: "https://github.com/bhanreddy1973/MEME-GENERATOR",
+    github: "https://github.com/bhanreddy1973/MEME-GENERATOR",
+  },
+  {
+    name: "Skin Cancer Classifier",
+    imageUrl: "/projects/skin_care.png",
+    description:
+      "CNN pipeline for skin cancer classification — 90.5% accuracy with INT8 quantization for edge deployment.",
+    href: "https://drive.google.com/file/d/1bI1m3YYtqdghhuphrybC0duBIaYopwnA/view",
+    github: "https://drive.google.com/file/d/1bI1m3YYtqdghhuphrybC0duBIaYopwnA/view",
   },
 ];

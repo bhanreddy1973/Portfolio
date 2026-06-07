@@ -10,7 +10,7 @@ type GitHubContributionsResponse = {
   contributions: GitHubContributionActivity[];
 };
 
-export const GITHUB_USERNAME = "harsh-m-patil";
+export const GITHUB_USERNAME = "bhanreddy1973";
 
 const GITHUB_CONTRIBUTIONS_URL = `https://github-contributions-api.jogruber.de/v4/${GITHUB_USERNAME}?y=last`;
 

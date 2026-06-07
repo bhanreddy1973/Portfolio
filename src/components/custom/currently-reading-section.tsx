@@ -8,7 +8,7 @@ import {
 } from "motion/react";
 import { BookOpenText } from "lucide-react";
 
-const BOOK_URL = "https://ericnormand.me/grokking-simplicity";
+const BOOK_URL = "https://www.oreilly.com/library/view/designing-machine-learning/9781098107956/";
 
 export function CurrentlyReading() {
   const reduceMotion = useReducedMotion();
@@ -21,7 +21,7 @@ export function CurrentlyReading() {
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-5 right-5 z-50 group no-underline"
-        aria-label="Currently reading: Grokking Simplicity"
+        aria-label="Currently reading: Designing Machine Learning Systems"
         initial={reduceMotion ? false : { opacity: 0, y: 20, scale: 0.96 }}
         animate={reduceMotion ? undefined : { opacity: 1, y: 0, scale: 1 }}
         transition={{
@@ -55,7 +55,7 @@ export function CurrentlyReading() {
               Reading
             </span>
             <span className="text-[13px] font-medium leading-tight text-muted-foreground/90 transition-colors duration-200 group-hover:text-foreground truncate">
-              Grokking Simplicity
+              Designing ML Systems
             </span>
           </div>
         </m.div>

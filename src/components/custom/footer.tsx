@@ -8,7 +8,7 @@ export function Footer() {
         Thanks for visiting my website. If you liked it, feel free to connect with
         me and if you want to use this portfolio template
         <Link
-          href="https://github.com/harsh-m-patil/portfolio"
+          href="https://github.com/bhanreddy1973/portfolio"
           target="_blank"
           rel="noreferrer"
           className="ml-1 underline font-mono transition-colors duration-160 ease-[var(--ease-out)] supports-[hover:hover]:hover:text-foreground"

@@ -56,11 +56,11 @@ export function GitHubContributionsGraph({
           <span>Last 12 months</span>
           <a
             className="font-mono text-[11px] tracking-[0.12em] text-muted-foreground/70 transition-colors duration-160 ease-[var(--ease-out)] supports-[hover:hover]:hover:text-foreground"
-            href="https://github.com/harsh-m-patil"
+            href="https://github.com/bhanreddy1973"
             target="_blank"
             rel="noreferrer"
           >
-            harsh-m-patil
+            bhanreddy1973
           </a>
         </div>
         <ContributionGraph
@@ -100,7 +100,7 @@ export function GitHubContributionsGraph({
                   {totalCount.toLocaleString("en")} contributions in {year} on{" "}
                   <a
                     className="font-medium underline underline-offset-4"
-                    href="https://github.com/harsh-m-patil"
+                    href="https://github.com/bhanreddy1973"
                     target="_blank"
                     rel="noreferrer"
                   >

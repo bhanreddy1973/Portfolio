@@ -12,7 +12,7 @@ export function GiscusComments() {
   return (
     <Giscus
       id="comments"
-      repo="harsh-m-patil/portfolio"
+      repo="bhanreddy1973/Portfolio"
       repoId="R_kgDOO14CKg"
       category="Announcements"
       categoryId="DIC_kwDOO14CKs4C1SmO"

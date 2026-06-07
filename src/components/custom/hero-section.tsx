@@ -23,7 +23,7 @@ export function HeroSection() {
             }}
             className="text-3xl text-black dark:text-white font-doto font-extrabold uppercase"
           >
-            Harshwardhan Patil
+            Bhanu Reddy
           </m.h1>
           <m.p
             initial={reduceMotion ? false : { opacity: 0, y: 6 }}
@@ -35,7 +35,7 @@ export function HeroSection() {
             }}
             className="text-muted-foreground"
           >
-            @harshmpatil
+            @bhanreddy1973
           </m.p>
         </div>
       </div>
@@ -45,18 +45,18 @@ export function HeroSection() {
           animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
           transition={{ duration: 0.32, delay: 0.12, ease: easeOut }}
         >
-          Hi I am <span className="transition-colors duration-200 ease-[var(--ease-out)] supports-[hover:hover]:hover:text-primary">Harshwardhan</span>, a 22 yo developer from Kolhapur
-          working as an <span className="transition-colors duration-200 ease-[var(--ease-out)] supports-[hover:hover]:hover:text-primary">Gen AI Intern</span> in{" "}
-          <span className="tracking-tighter transition-colors duration-200 ease-[var(--ease-out)] supports-[hover:hover]:hover:text-primary">Swiggy, Bengaluru, Karnataka</span>
-          . I try to code and not to break things.
+          Hi I am <span className="transition-colors duration-200 ease-[var(--ease-out)] supports-[hover:hover]:hover:text-primary">Bhanu Reddy</span>, a final-year CS student (AI & Data Science) from{" "}
+          <span className="transition-colors duration-200 ease-[var(--ease-out)] supports-[hover:hover]:hover:text-primary">IIIT Kottayam</span> working as an{" "}
+          <span className="transition-colors duration-200 ease-[var(--ease-out)] supports-[hover:hover]:hover:text-primary">AI / Data Engineering Intern</span> at{" "}
+          <span className="tracking-tighter transition-colors duration-200 ease-[var(--ease-out)] supports-[hover:hover]:hover:text-primary">Swiggy, Bangalore</span>. I build things and try not to break production.
         </m.p>
         <m.p
           initial={reduceMotion ? false : { opacity: 0, y: 6 }}
           animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
           transition={{ duration: 0.32, delay: 0.18, ease: easeOut }}
         >
-          I like to call myself a <span className="transition-colors duration-200 ease-[var(--ease-out)] supports-[hover:hover]:hover:text-primary">Full Stack Developer</span> with means I
-          am equally good (<span className="transition-colors duration-200 ease-[var(--ease-out)] supports-[hover:hover]:hover:text-primary">bad</span>) at both frontend and backend.
+          I specialize in <span className="transition-colors duration-200 ease-[var(--ease-out)] supports-[hover:hover]:hover:text-primary">Gen-AI pipelines</span> and{" "}
+          <span className="transition-colors duration-200 ease-[var(--ease-out)] supports-[hover:hover]:hover:text-primary">LLM engineering</span> — prompt engineering, structured output parsing, and large-scale data processing at warehouse scale.
         </m.p>
         <m.div
           initial={reduceMotion ? false : { opacity: 0, y: 6 }}
@@ -64,8 +64,8 @@ export function HeroSection() {
           transition={{ duration: 0.32, delay: 0.24, ease: easeOut }}
         >
           <p>
-            Recently i am looking at a lot of <span className="transition-colors duration-200 ease-[var(--ease-out)] supports-[hover:hover]:hover:text-primary">AI</span> Stuff, so maybe I
-            can also call myself a <span className="transition-colors duration-200 ease-[var(--ease-out)] supports-[hover:hover]:hover:text-primary">AI Engineer</span>.
+            Also into <span className="transition-colors duration-200 ease-[var(--ease-out)] supports-[hover:hover]:hover:text-primary">full-stack web dev</span> and{" "}
+            <span className="transition-colors duration-200 ease-[var(--ease-out)] supports-[hover:hover]:hover:text-primary">Graph Neural Networks</span> — LeetCode rating 1844, top 6.4% globally.
           </p>
         </m.div>
       </div>
