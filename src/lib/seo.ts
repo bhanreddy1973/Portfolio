@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "Bhanu Reddy Portfolio",
   shortName: "Bhanu Portfolio",
   description:
-    "Bhanu Reddy Cholapalli is an AI/Data Engineering Intern at Swiggy building Gen-AI pipelines, LLM-powered systems, and large-scale data infrastructure.",
+    "Bhanu Reddy Cholapalli — AI/Data Engineering Intern at Swiggy building production LLM pipelines, MCP tool servers, and real-time CDC streaming. Previously: medical AI research (90.5% accuracy), backend microservices, and open-source projects.",
   url: "https://bhanreddy1973.github.io",
   locale: "en_US",
   creator: "Bhanu Reddy Cholapalli",
@@ -15,8 +15,13 @@ export const siteConfig = {
     "Gen-AI pipeline",
     "LLM engineering",
     "data engineering",
+    "MCP tool server",
     "full stack developer",
     "Python developer",
+    "Swiggy intern",
+    "Apache Kafka",
+    "Apache Flink",
+    "CDC streaming",
   ],
   sameAs: [
     "https://github.com/bhanreddy1973",

@@ -62,24 +62,27 @@ export function HeroSection() {
           >
             <div className="glass rounded-2xl p-6 sm:p-8 space-y-4 max-w-xl">
               <p className="text-[15px] leading-relaxed text-foreground/80">
-                Final-year CS student turned{" "}
                 <span className="font-semibold text-foreground">AI & Data Engineering Intern</span>{" "}
                 at{" "}
                 <span className="inline-flex items-center gap-1 font-semibold text-foreground">
                   Swiggy
                   <Sparkles className="size-3.5 text-primary" />
-                </span>
+                </span>{" "}
+                — building production LLM pipelines that auto-document 6,500+ data warehouse tables,
+                MCP tool servers for agentic AI, and real-time CDC streaming with Kafka &amp; Flink.
               </p>
               <p className="text-[15px] leading-relaxed text-foreground/70">
-                I build <span className="font-medium text-foreground/90">Gen-AI pipelines</span>,
-                wrangle LLMs into structured outputs, and process data at warehouse scale.
-                Also into{" "}
-                <span className="font-medium text-foreground/90">full-stack web</span> &{" "}
-                <span className="font-medium text-foreground/90">Graph Neural Networks</span>.
+                Previously shipped{" "}
+                <span className="font-medium text-foreground/90">medical AI research</span> (CNN-based skin cancer detection, 90.5% accuracy) and{" "}
+                <span className="font-medium text-foreground/90">backend microservices</span> with 85% test coverage.
+                I also build side projects — from self-hosted{" "}
+                <span className="font-medium text-foreground/90">LLM inference gateways</span> to{" "}
+                <span className="font-medium text-foreground/90">local voice-to-text</span> apps and real-time chat platforms.
               </p>
-              <div className="flex items-center gap-3 pt-2 text-xs font-mono text-muted-foreground/60">
+              <div className="flex items-center gap-2.5 pt-2 text-xs font-mono text-muted-foreground/60 flex-wrap">
                 <span className="glass-subtle rounded-full px-3 py-1">LeetCode 1844</span>
                 <span className="glass-subtle rounded-full px-3 py-1">Top 6.4%</span>
+                <span className="glass-subtle rounded-full px-3 py-1">456 problems</span>
                 <span className="glass-subtle rounded-full px-3 py-1">IIIT Kottayam</span>
               </div>
             </div>
