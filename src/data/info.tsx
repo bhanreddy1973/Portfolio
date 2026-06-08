@@ -285,7 +285,7 @@ export const projects = [
     imageUrl: "/projects/Meme_generator.png",
     description:
       "AI-powered web app — prompt engineering pipeline generating contextually relevant content. Built with React, TypeScript, Firebase.",
-    href: "https://github.com/bhanreddy1973/MEME-GENERATOR",
+    href: "https://memegenius-frontend.onrender.com/",
     github: "https://github.com/bhanreddy1973/MEME-GENERATOR",
     about:
       "An AI-driven content generator using prompt engineering to create contextually relevant outputs with a clean React UI.",
