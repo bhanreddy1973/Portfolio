@@ -14,13 +14,13 @@ A modern, responsive portfolio built with **Next.js 15**, **React 19**, and **Ta
 
 ## Demo
 
-Check out the live demo: [https://harshmpatil.vercel.app](https://harshmpatil.vercel.app)
+Check out the live demo: [https://bhanureddy.vercel.app](https://bhanureddy.vercel.app)
 
 ## Quick Start
 
 ```bash
 # Clone the repository
-git clone https://github.com/harsh-m-patil/portfolio.git
+git clone https://github.com/bhanreddy1973/portfolio.git
 cd portfolio
 
 # Install dependencies and generate blog docs
@@ -102,4 +102,4 @@ Deploy on **Vercel** or any Node.js host:
 
 I don't care — use as you wish. Maybe star the repository.
 
-Built by [@harsh-m-patil](https://github.com/harsh-m-patil)
+Built by [@bhanreddy1973](https://github.com/bhanreddy1973)

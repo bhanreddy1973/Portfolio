@@ -1,6 +1,9 @@
+"use client";
+
+import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { Card } from "../ui/card";
+import { useCallback, useRef } from "react";
 
 type BlogCardProps = {
   blog: {
@@ -12,33 +15,49 @@ type BlogCardProps = {
 };
 
 export function BlogCard({ blog, url }: BlogCardProps) {
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  const handleMouseMove = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
+    const el = cardRef.current;
+    if (!el) return;
+    const rect = el.getBoundingClientRect();
+    el.style.setProperty("--mouse-x", `${e.clientX - rect.left}px`);
+    el.style.setProperty("--mouse-y", `${e.clientY - rect.top}px`);
+  }, []);
+
   return (
-    <Card className="group grid grid-cols-4 gap-2 rounded-md border p-0 transition-[transform,border-color,box-shadow] duration-200 ease-[var(--ease-out)] supports-[hover:hover]:hover:-translate-y-0.5 supports-[hover:hover]:hover:shadow-md">
-      <div className="col-span-4 sm:col-span-1">
+    <Link href={url} className="group block">
+      <div
+        ref={cardRef}
+        className="spotlight-card glass relative grid grid-cols-1 sm:grid-cols-4 gap-0 rounded-2xl overflow-hidden transition-all duration-300 ease-[var(--ease-out)] supports-[hover:hover]:group-hover:shadow-xl supports-[hover:hover]:group-hover:-translate-y-1 supports-[hover:hover]:group-hover:scale-[1.01]"
+        onMouseMove={handleMouseMove}
+      >
         {blog.imageUrl && (
-          <Link href={url} className="block h-full overflow-hidden rounded-l-md">
+          <div className="sm:col-span-1 overflow-hidden">
             <Image
               src={blog.imageUrl}
-              height="400"
-              width="400"
+              height={400}
+              width={400}
               alt={blog.title}
-              className="h-full w-full rounded-l-md object-cover transition-transform duration-300 ease-[var(--ease-out)] supports-[hover:hover]:group-hover:scale-[1.02]"
+              className="h-full w-full object-cover transition-transform duration-700 ease-[var(--ease-out)] supports-[hover:hover]:group-hover:scale-110"
             />
-          </Link>
+          </div>
         )}
-      </div>
-      <div className="text-muted-foreground py-3 px-2 col-span-4 sm:col-span-3">
-        <p className="text-xl text-foreground">{blog.title}</p>
-        <p className="mt-2 text-muted-foreground">{blog.description}</p>
-        <div className="flex w-full justify-end px-4 py-3">
-          <Link
-            href={url}
-            className="underline tracking-widest transition-[color,opacity,transform] duration-150 ease-[var(--ease-out)] supports-[hover:hover]:hover:text-foreground active:scale-[0.97]"
-          >
+        <div className="relative z-10 sm:col-span-3 p-6 flex flex-col justify-center gap-3">
+          <h3 className="text-lg font-semibold text-foreground leading-snug transition-colors duration-200 group-hover:text-primary">
+            {blog.title}
+          </h3>
+          {blog.description && (
+            <p className="text-sm text-muted-foreground/70 leading-relaxed line-clamp-2">
+              {blog.description}
+            </p>
+          )}
+          <span className="inline-flex items-center gap-1.5 text-xs font-mono text-primary/70 mt-1 transition-all duration-200 group-hover:gap-2.5 group-hover:text-primary">
             Read article
-          </Link>
+            <ArrowUpRight className="size-3 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+          </span>
         </div>
       </div>
-    </Card>
+    </Link>
   );
 }

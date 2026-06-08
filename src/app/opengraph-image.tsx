@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Harsh's Portfolio";
+export const alt = "Bhanu Reddy's Portfolio";
 
 export const size = {
   width: 1200,
@@ -81,7 +81,7 @@ export default function OpenGraphImage() {
             }}
           >
             <div style={{ display: "flex", textTransform: "uppercase" }}>
-              harshmpatil.xyz
+              bhanureddy.dev
             </div>
             <div
               style={{
@@ -128,7 +128,7 @@ export default function OpenGraphImage() {
                 color: "rgba(244, 244, 245, 0.75)",
               }}
             >
-              Harshwardhan Patil
+              Bhanu Reddy
             </div>
             <div
               style={{
@@ -177,7 +177,7 @@ export default function OpenGraphImage() {
                     "linear-gradient(90deg, rgba(56, 189, 248, 0.14), rgba(16, 185, 129, 0.1))",
                 }}
               >
-                @patilharshm
+                @bhanreddy1973
               </div>
               <div style={{ display: "flex" }}>Swiggy, Bengaluru, India</div>
             </div>

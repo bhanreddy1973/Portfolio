@@ -33,7 +33,7 @@ export function GitHubContributionsGraph({
       <Section>
         <SectionHeading>
           <SectionTitle>GitHub</SectionTitle>
-          Recent contributions
+          <span className="text-muted-foreground/60">Recent contributions</span>
         </SectionHeading>
         <SectionDescription>
           Couldn&apos;t load contributions right now.
@@ -46,29 +46,26 @@ export function GitHubContributionsGraph({
     <Section>
       <SectionHeading>
         <SectionTitle>GitHub</SectionTitle>
-        Recent contributions
+        <span className="text-muted-foreground/60">My commit trail</span>
       </SectionHeading>
-      <SectionDescription>
-        A quick look at the last year of public activity.
-      </SectionDescription>
-      <div className="mt-4 rounded-2xl border border-muted/60 bg-muted/30 p-4 shadow-sm">
-        <div className="flex flex-wrap items-center justify-between gap-2 text-[11px] uppercase tracking-[0.25em] text-muted-foreground/70">
+      <div className="mt-6 rounded-2xl border border-border bg-background p-6 transition-all duration-300 ease-[var(--ease-out)] supports-[hover:hover]:hover:shadow-lg">
+        <div className="flex flex-wrap items-center justify-between gap-2 text-[10px] uppercase tracking-[0.25em] text-muted-foreground/40 font-mono mb-4">
           <span>Last 12 months</span>
           <a
-            className="font-mono text-[11px] tracking-[0.12em] text-muted-foreground/70 transition-colors duration-160 ease-[var(--ease-out)] supports-[hover:hover]:hover:text-foreground"
+            className="transition-colors duration-200 supports-[hover:hover]:hover:text-primary"
             href="https://github.com/bhanreddy1973"
             target="_blank"
             rel="noreferrer"
           >
-            bhanreddy1973
+            @bhanreddy1973
           </a>
         </div>
         <ContributionGraph
-          className="mx-auto pt-3"
+          className="mx-auto"
           data={contributions}
-          blockSize={10}
+          blockSize={11}
           blockMargin={2}
-          blockRadius={1}
+          blockRadius={2}
         >
           <ContributionGraphCalendar
             className="px-1 text-[11px]"
@@ -85,7 +82,7 @@ export function GitHubContributionsGraph({
                     />
                   </g>
                 </TooltipTrigger>
-                <TooltipContent side="top" className="font-mono">
+                <TooltipContent side="top" className="font-mono text-xs rounded-xl">
                   {activity.count} contribution
                   {activity.count === 1 ? "" : "s"} on{" "}
                   {new Date(activity.date).toLocaleDateString("en-GB")}
@@ -93,20 +90,11 @@ export function GitHubContributionsGraph({
               </Tooltip>
             )}
           </ContributionGraphCalendar>
-          <ContributionGraphFooter className="px-1 pt-3 text-xs">
+          <ContributionGraphFooter className="px-1 pt-4 text-xs">
             <ContributionGraphTotalCount>
               {({ totalCount, year }) => (
-                <div className="text-muted-foreground">
-                  {totalCount.toLocaleString("en")} contributions in {year} on{" "}
-                  <a
-                    className="font-medium underline underline-offset-4"
-                    href="https://github.com/bhanreddy1973"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    GitHub
-                  </a>
-                  .
+                <div className="text-muted-foreground/60 font-mono text-[11px]">
+                  {totalCount.toLocaleString("en")} contributions in {year}
                 </div>
               )}
             </ContributionGraphTotalCount>

@@ -22,39 +22,39 @@ export function CurrentlyReading() {
         rel="noopener noreferrer"
         className="fixed bottom-5 right-5 z-50 group no-underline"
         aria-label="Currently reading: Designing Machine Learning Systems"
-        initial={reduceMotion ? false : { opacity: 0, y: 20, scale: 0.96 }}
+        initial={reduceMotion ? false : { opacity: 0, y: 20, scale: 0.94 }}
         animate={reduceMotion ? undefined : { opacity: 1, y: 0, scale: 1 }}
         transition={{
-          duration: 0.5,
+          duration: 0.6,
           ease: easeOut,
-          delay: 1.2,
+          delay: 1.8,
         }}
       >
         <m.div
-          className="flex items-center gap-2.5 rounded-2xl border border-border/50 bg-card/80 backdrop-blur-xl px-4 py-3 shadow-lg"
-          whileTap={reduceMotion ? undefined : { scale: 0.97 }}
-          whileHover={reduceMotion ? undefined : { y: -2 }}
+          className="glass flex items-center gap-3 rounded-2xl px-4 py-3 transition-all duration-300 supports-[hover:hover]:group-hover:shadow-xl supports-[hover:hover]:group-hover:-translate-y-1"
+          whileTap={reduceMotion ? undefined : { scale: 0.96 }}
+          whileHover={reduceMotion ? undefined : { y: -3 }}
           transition={{ duration: 0.2, ease: easeOut }}
         >
-          {/* Live indicator */}
+          {/* Live dot */}
           <span className="relative flex size-2 shrink-0">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400/60 duration-[2000ms]" />
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400/50 duration-[2500ms]" />
             <span className="relative inline-flex size-2 rounded-full bg-emerald-500" />
           </span>
 
           <m.div
-            className="shrink-0 text-muted-foreground/60 transition-colors duration-200 group-hover:text-foreground/90"
+            className="shrink-0 text-muted-foreground/50 transition-colors duration-200 group-hover:text-primary"
             whileHover={reduceMotion ? undefined : { rotate: -8 }}
             transition={{ type: "spring", duration: 0.4, bounce: 0.25 }}
           >
             <BookOpenText className="size-4" strokeWidth={1.7} />
           </m.div>
 
-          <div className="flex flex-col gap-0.5 min-w-0">
-            <span className="text-[10px] font-medium uppercase tracking-widest text-muted-foreground/50 transition-colors duration-200 group-hover:text-muted-foreground/80">
+          <div className="flex flex-col min-w-0">
+            <span className="text-[9px] font-mono uppercase tracking-[0.2em] text-muted-foreground/35">
               Reading
             </span>
-            <span className="text-[13px] font-medium leading-tight text-muted-foreground/90 transition-colors duration-200 group-hover:text-foreground truncate">
+            <span className="text-[12px] font-medium leading-tight text-muted-foreground/70 transition-colors duration-200 group-hover:text-foreground truncate">
               Designing ML Systems
             </span>
           </div>

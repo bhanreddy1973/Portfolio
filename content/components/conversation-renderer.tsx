@@ -88,7 +88,7 @@ const conversation: Conversation = {
     {
       role: "tool",
       content:
-        "total 16\ndrwxr-xr-x@  4 harshwardhan  user   128 Apr 15 12:26 .\ndrwxr-xr-x@ 33 harshwardhan  user  1056 Apr 15 12:24 ..\n-rw-r--r--@  1 harshwardhan  user    23 Apr 15 12:26 go.mod\n-rw-r--r--@  1 harshwardhan  user    54 Apr 15 12:26 main.go\n",
+        "total 16\ndrwxr-xr-x@  4 bhanureddy  user   128 Apr 15 12:26 .\ndrwxr-xr-x@ 33 bhanureddy  user  1056 Apr 15 12:24 ..\n-rw-r--r--@  1 bhanureddy  user    23 Apr 15 12:26 go.mod\n-rw-r--r--@  1 bhanureddy  user    54 Apr 15 12:26 main.go\n",
       tool_call_id: "tooluse_Ub1uBCp1PJurLiSN4z5HAq",
     },
     {
@@ -100,7 +100,7 @@ const conversation: Conversation = {
           type: "function",
           function: {
             name: "read",
-            arguments: '{"path":"/Users/harshwardhan/temp/demo/main.go"}',
+            arguments: '{"path":"/Users/bhanureddy/temp/demo/main.go"}',
           },
         },
       ],

@@ -87,7 +87,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${doto.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${doto.variable} antialiased grain`}
       >
         <ThemeProvider
           attribute="class"
@@ -96,6 +96,13 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <RootProvider>
+            {/* Aurora ambient background */}
+            <div className="aurora" aria-hidden="true">
+              <div className="aurora-blob" />
+              <div className="aurora-blob" />
+              <div className="aurora-blob" />
+            </div>
+
             <Navbar />
             {children}
             <CurrentlyReading />

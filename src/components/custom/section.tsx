@@ -18,10 +18,10 @@ function Section({ className, ...props }: SectionProps) {
   return (
     <LazyMotion features={domAnimation}>
       <m.section
-        initial={reduceMotion ? false : { opacity: 0, y: 10 }}
+        initial={reduceMotion ? false : { opacity: 0, y: 20 }}
         whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
-        viewport={reduceMotion ? undefined : { once: true, amount: 0.3 }}
-        transition={{ duration: 0.42, ease: easeOut }}
+        viewport={reduceMotion ? undefined : { once: true, amount: 0.15 }}
+        transition={{ duration: 0.6, ease: easeOut }}
         className={cn(className)}
         {...props}
       />
@@ -29,15 +29,15 @@ function Section({ className, ...props }: SectionProps) {
   );
 }
 
-function SectionHeading({ className, ...props }: React.ComponentProps<"p">) {
-  return <p className={cn("text-muted-foreground/50", className)} {...props} />;
+function SectionHeading({ className, ...props }: React.ComponentProps<"div">) {
+  return <div className={cn("space-y-1", className)} {...props} />;
 }
 
-function SectionTitle({ className, ...props }: React.ComponentProps<"span">) {
+function SectionTitle({ className, ...props }: React.ComponentProps<"h2">) {
   return (
-    <span
+    <h2
       className={cn(
-        "mr-3 text-black dark:text-white text-2xl font-doto font-extrabold tracking-wider",
+        "text-3xl sm:text-4xl font-doto font-black tracking-tight text-foreground",
         className,
       )}
       {...props}
@@ -50,7 +50,7 @@ function SectionDescription({
   ...props
 }: React.ComponentProps<"p">) {
   return (
-    <p className={cn("text-muted-foreground/80 mt-2", className)} {...props} />
+    <p className={cn("text-sm text-muted-foreground/60 mt-1", className)} {...props} />
   );
 }
 

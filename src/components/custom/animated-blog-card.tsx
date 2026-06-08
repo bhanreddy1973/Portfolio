@@ -12,11 +12,11 @@ export function AnimatedBlogCard({ children }: AnimatedBlogCardProps) {
 
   return (
     <m.div
-      className="py-4"
-      initial={reduceMotion ? false : { opacity: 0, y: 10, scale: 0.99 }}
+      className="mt-6"
+      initial={reduceMotion ? false : { opacity: 0, y: 16, scale: 0.98 }}
       whileInView={reduceMotion ? undefined : { opacity: 1, y: 0, scale: 1 }}
       viewport={reduceMotion ? undefined : { once: true, amount: 0.3 }}
-      transition={{ duration: 0.36, ease: easeOut }}
+      transition={{ duration: 0.6, ease: easeOut }}
     >
       {children}
     </m.div>

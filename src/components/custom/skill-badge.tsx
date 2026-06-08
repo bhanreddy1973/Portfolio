@@ -1,4 +1,6 @@
-import { Button } from "@/components/ui/button";
+"use client";
+
+import { Star } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 type SkillBadgeProps = {
@@ -13,21 +15,17 @@ export function SkillBadge({
   className,
 }: SkillBadgeProps) {
   return (
-    <Button
-      variant="secondary"
+    <div
       className={cn(
-        "relative group shadow-sm transition-transform duration-160 ease-[var(--ease-out)] supports-[hover:hover]:hover:-translate-y-0.5",
-        favourite &&
-          "border-primary/20 dark:bg-primary/10 text-foreground shadow-sm",
+        "glass-subtle inline-flex items-center gap-1.5 rounded-xl px-3.5 py-2 text-sm font-medium text-foreground/80 transition-all duration-200 ease-[var(--ease-out)] cursor-default supports-[hover:hover]:hover:-translate-y-0.5 supports-[hover:hover]:hover:shadow-md supports-[hover:hover]:hover:text-foreground",
+        favourite && "ring-1 ring-primary/25 bg-primary/5",
         className,
       )}
     >
       {children}
       {favourite ? (
-        <span className="pointer-events-none absolute -top-2 left-1/2 -translate-x-1/2 rounded-full border border-primary/40 bg-background px-2 py-0.5 text-[10px] tracking-wide text-primary shadow-sm opacity-0 scale-95 transition-[opacity,transform] duration-150 ease-[var(--ease-out)] group-hover:opacity-100 group-hover:scale-100">
-          Favourite
-        </span>
+        <Star className="size-2.5 fill-primary text-primary opacity-80" />
       ) : null}
-    </Button>
+    </div>
   );
 }

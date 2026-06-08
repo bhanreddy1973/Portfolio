@@ -2,6 +2,7 @@ import {
   IconBrandAws,
   IconBrandGithub,
   IconBrandLinkedin,
+  IconBrandMedium,
   IconBrandNodejs,
   IconBrandPython,
   IconMail,
@@ -41,6 +42,16 @@ export const socials: Social[] = [
     name: "LinkedIn",
     icon: <IconBrandLinkedin className="size-4" />,
     href: "https://www.linkedin.com/in/bhanu-reddy-a30882288/",
+  },
+  {
+    name: "Medium",
+    icon: <IconBrandMedium className="size-4" />,
+    href: "https://medium.com/@rbhanu504",
+  },
+  {
+    name: "Substack",
+    icon: <IconMail className="size-4" />,
+    href: "https://substack.com/@bhanureddy3",
   },
 ];
 
@@ -198,7 +209,7 @@ export const workExperience = [
     company: "IIIT Kottayam",
     role: "Research Assistant — Medical AI",
     type: "intern",
-    iconUrl: "/talnex.png",
+    iconUrl: "/projects/iiitkottayam.png",
     period: "Aug 2024 - Sept 2025",
     location: "Kottayam, Kerala",
     points: [
@@ -232,6 +243,20 @@ export const projects = [
       "Self-hostable API gateway for Claude models — FastAPI, gRPC workers, Redis rate limiting, ClickHouse analytics, and a Next.js dashboard.",
     href: "https://llm-inference-gateway.vercel.app/",
     github: "https://github.com/bhanreddy1973/LLM-Inference-Gateway",
+    about:
+      "A production-grade inference gateway that load-balances requests across Claude model workers with token-level rate limiting and real-time analytics.",
+    techStack: ["FastAPI", "gRPC", "Redis", "ClickHouse", "Next.js", "Docker"],
+  },
+  {
+    name: "TalkFlow",
+    imageUrl: "/projects/talkflow.png",
+    description:
+      "100% local voice typing for macOS — hold a hotkey, speak, text appears live at your cursor. Powered by faster-whisper with real-time streaming, silence detection, and smart punctuation. No cloud, no API keys.",
+    href: "https://talk-flow-orpin.vercel.app/",
+    github: "https://github.com/bhanreddy1973/TalkFlow",
+    about:
+      "A macOS menu bar app that streams Whisper transcription live as you speak — text appears at your cursor in real-time with no cloud dependency.",
+    techStack: ["Python", "faster-whisper", "PyObjC", "rumps", "sounddevice", "Next.js"],
   },
   {
     name: "Bite a Bit",
@@ -240,6 +265,9 @@ export const projects = [
       "Full-stack food ordering app with personalized dining experience — Next.js, TypeScript, Firebase, and Firestore.",
     href: "https://biteabit.vercel.app/",
     github: "https://github.com/bhanreddy1973/bite_a_bit",
+    about:
+      "A food ordering platform with personalized recommendations, real-time order tracking, and a smooth checkout experience.",
+    techStack: ["Next.js", "TypeScript", "Firebase", "Firestore", "Tailwind CSS"],
   },
   {
     name: "Distributed Real-Time Platform",
@@ -248,6 +276,9 @@ export const projects = [
       "Real-time chat platform with sub-second latency, 15+ REST APIs, JWT auth, and 99.9% uptime on AWS.",
     href: "https://vchat-xn0io.sevalla.app/",
     github: "https://github.com/bhanreddy1973/vchat",
+    about:
+      "A scalable real-time messaging platform with WebSocket connections, JWT authentication, and deployed on AWS with high availability.",
+    techStack: ["Node.js", "Express", "WebSocket", "MongoDB", "JWT", "AWS"],
   },
   {
     name: "AI Content Generation App",
@@ -256,6 +287,9 @@ export const projects = [
       "AI-powered web app — prompt engineering pipeline generating contextually relevant content. Built with React, TypeScript, Firebase.",
     href: "https://github.com/bhanreddy1973/MEME-GENERATOR",
     github: "https://github.com/bhanreddy1973/MEME-GENERATOR",
+    about:
+      "An AI-driven content generator using prompt engineering to create contextually relevant outputs with a clean React UI.",
+    techStack: ["React", "TypeScript", "Firebase", "OpenAI API"],
   },
   {
     name: "Skin Cancer Classifier",
@@ -264,5 +298,8 @@ export const projects = [
       "CNN pipeline for skin cancer classification — 90.5% accuracy with INT8 quantization for edge deployment.",
     href: "https://drive.google.com/file/d/1bI1m3YYtqdghhuphrybC0duBIaYopwnA/view",
     github: "https://drive.google.com/file/d/1bI1m3YYtqdghhuphrybC0duBIaYopwnA/view",
+    about:
+      "A deep learning pipeline for dermoscopy image classification with model compression for edge deployment on medical devices.",
+    techStack: ["Python", "PyTorch", "OpenCV", "ONNX", "NumPy"],
   },
 ];

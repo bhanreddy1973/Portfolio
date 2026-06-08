@@ -3,12 +3,16 @@ import Script from "next/script";
 import { ContactSection } from "@/components/custom/contact-section";
 import { Footer } from "@/components/custom/footer";
 import { GitHubContributionsSection } from "@/components/custom/github-contributions-section";
+import { GitHubStatsSection } from "@/components/custom/github-stats-section";
 import { HeroSection } from "@/components/custom/hero-section";
+import { LeetCodeSection } from "@/components/custom/leetcode-section";
 import { ProjectsSection } from "@/components/custom/projects-section";
 import { SkillsSection } from "@/components/custom/skills-section";
 import { BlogsSection } from "@/components/custom/blogs-section";
 import { WorkExperienceSection } from "@/components/custom/work-experience-section";
-import { Separator } from "@/components/ui/separator";
+import { getExternalBlogs } from "@/lib/external-blogs";
+import { getGitHubStats } from "@/lib/github-stats";
+import { getLeetCodeStats } from "@/lib/leetcode";
 import { absoluteUrl, siteConfig, toJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
@@ -19,7 +23,11 @@ export const metadata: Metadata = {
   },
 };
 
-export default function Home() {
+export default async function Home() {
+  const leetcodeStats = await getLeetCodeStats();
+  const githubStats = await getGitHubStats();
+  const externalPosts = await getExternalBlogs();
+
   const personJsonLd = {
     "@context": "https://schema.org",
     "@type": "Person",
@@ -40,28 +48,29 @@ export default function Home() {
   };
 
   return (
-    <main className="max-w-2xl mx-auto px-4 font-sans pb-12">
+    <>
       <Script id="person-json-ld" type="application/ld+json">
         {toJsonLd(personJsonLd)}
       </Script>
       <Script id="website-json-ld" type="application/ld+json">
         {toJsonLd(websiteJsonLd)}
       </Script>
+
+      {/* Full-width hero */}
       <HeroSection />
-      <Separator className="my-6" />
-      <ContactSection />
-      <Separator className="my-6" />
-      <BlogsSection />
-      <Separator className="my-6" />
-      <GitHubContributionsSection />
-      <Separator className="my-6" />
-      <WorkExperienceSection />
-      <Separator className="my-6" />
-      <SkillsSection />
-      <Separator className="my-6" />
-      <ProjectsSection />
-      <Separator className="my-6" />
-      <Footer />
-    </main>
+
+      {/* Content sections */}
+      <main className="relative z-10 max-w-3xl mx-auto px-6 sm:px-8 pb-24 space-y-28">
+        <ContactSection />
+        <BlogsSection externalPosts={externalPosts} />
+        <GitHubStatsSection stats={githubStats} />
+        <GitHubContributionsSection />
+        {leetcodeStats && <LeetCodeSection stats={leetcodeStats} />}
+        <WorkExperienceSection />
+        <SkillsSection />
+        <ProjectsSection />
+        <Footer />
+      </main>
+    </>
   );
 }
